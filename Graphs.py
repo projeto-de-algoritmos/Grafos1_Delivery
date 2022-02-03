@@ -1,53 +1,90 @@
 from collections import defaultdict 
 
-class Grafo:
+def init_graph():
+# RED nodes
+    graph = {'0': ['1'],
+            '1': ['0', '2', '7'],
+            '2': ['1', '3', '4', '6'],
+            '3': ['2', '4', '5', '22'],
+            '4': ['3', '2'],
+            '5': ['3','6', '12', '21'],
+            '6': ['2', '5', '7'],
+            '7': ['1', '8'],
+            '8': ['7', '9', '14', '13'],
+            '9': ['8', '10', '15'],
+            '10': ['6', '9', '11', '16'],
+            '11': ['10', '10', '17', '18'],
+            '12': ['5', '11', '19', '20'],
 
-    def __init__(self): 
-        self.graph = defaultdict(list) 
+# GREEN nodes
+            '13': ['8'],
+            '14': ['8'],
+            '15': ['9'],
+            '16': ['10'],
+            '17': ['11'],
+            '18': ['11'],
+            '19': ['12'],
+            '20': ['12'],
+            '21': ['5'],
+            '22': ['3']}
+            
+    return graph
 
-    def adiciona_aresta(self,u,v): 
-        self.graph[u].append(v) 
-        #self.graph[v-1].append(u) 
 
-    def mostra_grafo(self):
-        for i in range(len(self.graph)):
-            print(f'{i}:', end='  ')
-            for j in self.graph[i]:
-                print(f'{j}  ||', end='  ')
-            print('\n')
-    
-    def BFS(self, posInicio): 
-        print("-----BFS-----")
-    
-        visited = [False] * (len(self.graph)) 
-        lista = [] 
-        lista.append(posInicio) 
-        visited[posInicio] = True
+def BFS(graph, posInicio): 
+    print("-----BFS-----")
 
-        while lista: 
+    visited = [False] * (len(graph)) 
+    lista = [] 
+    lista.append(posInicio) 
+    visited[posInicio] = True
 
-            posInicio = lista.pop(0) 
-            print(f'{posInicio}  ->', end='  ') 
+    while lista: 
 
-            for i in self.graph[posInicio]: 
-                if visited[i] == False: 
-                    lista.append(i) 
-                    visited[i] = True
-        print("Done!")
+        posInicio = lista.pop(0) 
+        print(f'{posInicio}  ->', end='  ') 
 
-# g = Grafo()
+        for i in graph[posInicio]: 
+            if visited[i] == False: 
+                lista.append(i) 
+                visited[i] = True
+    print("Done!")
+    return
 
-# g.adiciona_aresta(0, 2) 
-# g.adiciona_aresta(0, 3) 
-# g.adiciona_aresta(0, 4) 
-# g.adiciona_aresta(1, 2) 
-# g.adiciona_aresta(1, 4) 
-# g.adiciona_aresta(2, 4) 
-# g.adiciona_aresta(3, 4) 
-# g.adiciona_aresta(3, 5)
-# g.adiciona_aresta(4, 5)
-# g.adiciona_aresta(5, 1)
 
-# g.mostra_grafo()
+def BFS_short_path(graph, end):
+	visited = []	
+	queue = [['0']]
+	var_break = 0
 
-# g.BFS(0)
+	while queue:
+		if(var_break == -1):
+			break
+
+		path = queue.pop(0)
+		node = path[-1]
+		#print(f'pop - > {path}', end='   ')
+		
+		if node not in visited:
+			near_edges = graph[node]
+			
+			for edge in near_edges:
+				new_path = list(path)
+				new_path.append(edge)
+				queue.append(new_path)
+				
+				if edge == end:
+					print("Menor caminho = ", *new_path)
+					var_break = -1
+                    
+			visited.append(node)
+
+	return
+
+
+if __name__ == "__main__":
+	
+    graph = init_graph()
+
+
+    BFS_short_path(graph, '16')
