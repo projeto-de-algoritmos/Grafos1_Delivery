@@ -12,14 +12,14 @@
 | 18/0103431  |  João Victor Valadão |
 
 ## Sobre 
-Descreva os objetivos do seu projeto e como ele funciona. 
+O nosso projeto é chamado de GDelivery, onde o objetivo é achar o melhor e mais curto caminho para sua entrega, usando grafos BFS para encontrar esse caminho. Com a utilização de interfaces gráficas feitas no TKinter uma biblioteca padrão python para a fácil visualização desses caminhos.
 
 ## Screenshots
 Adicione 3 ou mais screenshots do projeto em funcionamento.
 
 ## Instalação 
-**Linguagem**: xxxxxx<br>
-**Framework**: (caso exista)<br>
+**Linguagem**: Pythonx<br>
+**Framework**: TKinter<br>
 Descreva os pré-requisitos para rodar o seu projeto e os comandos necessários.
 
 ## Uso 
