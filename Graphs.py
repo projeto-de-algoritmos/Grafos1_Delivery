@@ -56,6 +56,7 @@ def BFS_short_path(graph, end):
 	visited = []	
 	queue = [['0']]
 	var_break = 0
+	goal = []
 
 	while queue:
 		if(var_break == -1):
@@ -75,16 +76,17 @@ def BFS_short_path(graph, end):
 				
 				if edge == end:
 					print("Menor caminho = ", *new_path)
+					goal = new_path
 					var_break = -1
                     
 			visited.append(node)
 
-	return
+	return goal
 
 
-if __name__ == "__main__":
+# if __name__ == "__main__":
 	
-    graph = init_graph()
+#     graph = init_graph()
 
 
-    BFS_short_path(graph, '16')
+#     BFS_short_path(graph, '16')

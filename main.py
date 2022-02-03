@@ -1,5 +1,6 @@
 from tkinter import *
 from PIL import ImageTk,Image
+from Graphs import *
 
 
 root = Tk()
@@ -30,14 +31,53 @@ def show_map():
     button_back.place(relx=0.5,rely=0.9,anchor=CENTER)
 
 def show_path():
+    # graph = init_graph()
+
+    # path = BFS_short_path(graph, '16')
+    # print(path)
+
     global background
+    global e
     background.grid_forget()
     background = Label(image=imag_3)
     background.grid(row = 1, column = 0, columnspan = 3)
 
-    button_back = Button(root,text='Back',padx=117,pady=5,fg='snow',bg='black',command=back)
-    button_back.place(relx=0.5,rely=0.9,anchor=CENTER)
+    e = Entry(root, width=15, bg="#1B1918", fg = "snow")
+    e.place(relx=0.92,rely=0.9,anchor=CENTER)
 
+    button_enter = Button(root,text='Buscar',padx=30,pady=5,fg='snow',bg='black',command=show_small_path)
+    button_enter.place(relx=0.92,rely=0.95,anchor=CENTER)
+
+    button_back = Button(root,text='Back',padx=30,pady=5,fg='snow',bg='black',command=back)
+    button_back.place(relx=0.075,rely=0.05,anchor=CENTER)
+
+def show_small_path():
+
+    global background
+    global e
+    background.grid_forget()
+    background = Label(image=imag_3)
+    background.grid(row = 1, column = 0, columnspan = 3)
+
+    goal = e.get()
+    #print(goal)
+    
+    graph = init_graph()
+    path = BFS_short_path(graph, goal)
+    #print(path)
+
+    text=Text(root, width=20, height=10,fg='snow',bg='black')
+    text.place(relx=0.5,rely=0.5,anchor=CENTER)
+    text.insert(END, 'Menor Caminho:\n')
+
+    for day in path:
+        text.insert(END, day + '\n')
+
+    # MyLabel = Label(root, text="Menor Caminho encontrado:  " + str(path),padx=30,pady=5,fg='snow',bg='black')
+    # MyLabel.place(relx=0.5,rely=0.9,anchor=CENTER)
+
+    # for i in range(len(path)):
+    #     exec('Label%d=Label(root,text="%s")\nLabel%d.pack()' % (i,path[i],i))
 
 def back():
     
@@ -65,7 +105,5 @@ butaoPvP.place(relx=0.5,rely=0.2,anchor=CENTER)
 
 butaoExit = Button(root,text='SAIR',padx=117,pady=5,fg='snow',bg='black',command=root.quit)
 butaoExit.place(relx=0.5,rely=0.5,anchor=CENTER)
-
-
 
 root.mainloop()
