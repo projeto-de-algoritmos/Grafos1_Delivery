@@ -11,10 +11,11 @@ root.resizable(width = False, height = False)
 root.iconbitmap('assets/delivey.ico')
 
 imag_1 = PhotoImage(file= "assets/backgroundDelivery.png")
-imag_2 = PhotoImage(file = "assets/mapaBrasilia.png")
-imag_3 = PhotoImage(file = "assets/va_va_land.png")
+imag_2 = PhotoImage(file = "assets/Va_va_land_city.png")
+imag_3 = PhotoImage(file = "assets/va_va_land_city.png")
+imag_4 = PhotoImage(file = "assets/Va_va_land_city_nodes.png")
 
-imageList = [imag_1, imag_2, imag_3]
+imageList = [imag_1, imag_2, imag_3, imag_4]
 
 # Imagem de fundo
 background = Label(image=imag_1)
@@ -56,7 +57,7 @@ def show_small_path():
     global background
     global e
     background.grid_forget()
-    background = Label(image=imag_3)
+    background = Label(image=imag_4)
     background.grid(row = 1, column = 0, columnspan = 3)
 
     goal = e.get()
@@ -66,8 +67,11 @@ def show_small_path():
     path = BFS_short_path(graph, goal)
     #print(path)
 
+    button_back = Button(root,text='Back',padx=30,pady=5,fg='snow',bg='black',command=back)
+    button_back.place(relx=0.075,rely=0.05,anchor=CENTER)
+
     text=Text(root, width=20, height=10,fg='snow',bg='black')
-    text.place(relx=0.5,rely=0.5,anchor=CENTER)
+    text.place(relx=0.5,rely=0.625,anchor=CENTER)
     text.insert(END, 'Menor Caminho:\n')
 
     for day in path:
