@@ -16,7 +16,7 @@ O nosso projeto é chamado de GDelivery, onde o objetivo é achar o melhor e mai
 
 ## Apresentação
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/V98-hE-wLLE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![Vídeo do projeto](https://img.youtube.com/vi/V98-hE-wLLE/0.jpg)](https://youtu.be/V98-hE-wLLE)
 
 ## Screenshots
 
