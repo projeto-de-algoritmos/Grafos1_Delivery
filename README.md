@@ -15,18 +15,38 @@
 O nosso projeto é chamado de GDelivery, onde o objetivo é achar o melhor e mais curto caminho para sua entrega, usando grafos BFS para encontrar esse caminho. Com a utilização de interfaces gráficas feitas no TKinter uma biblioteca padrão python para a fácil visualização desses caminhos.
 
 ## Screenshots
-Adicione 3 ou mais screenshots do projeto em funcionamento.
+
+<center>
+
+![Tela inicial](assets/TelaInicial.png)
+<figcaption>Figura 1: Tela inicial do aplicativo</figcaption>
+
+![Mapa](assets/visualizarMapa.png)
+<figcaption>Figura 2: Tela visualizar mapa</figcaption>
+
+![Mapa](assets/menorRota.png)
+<figcaption>Figura 3: Tela do caminho</figcaption>
+
+</center>
 
 ## Instalação 
-**Linguagem**: Pythonx<br>
-**Framework**: TKinter<br>
-Descreva os pré-requisitos para rodar o seu projeto e os comandos necessários.
+**Linguagem**: Python<br>
+**Framework**: TKinter (biblioteca padrão do python)<br>
+
+Para o funcionamento do projeto é necessário rodar:
+
+```jsx
+pip install pillow
+```
 
 ## Uso 
-Explique como usar seu projeto caso haja algum passo a passo após o comando de execução.
+Para rodar o aplicativo é bem simples, rode o programa utilizando o **main.py** com o seguinte comando abaixo:
 
-## Outros 
-Quaisquer outras informações sobre seu projeto podem ser descritas abaixo.
+```jsx
+python main.py
+ou
+python3 main.py
+```
 
 
 
