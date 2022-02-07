@@ -14,18 +14,28 @@
 ## Sobre 
 O nosso projeto é chamado de GDelivery, onde o objetivo é achar o melhor e mais curto caminho para sua entrega, usando grafos BFS para encontrar esse caminho. Com a utilização de interfaces gráficas feitas no TKinter uma biblioteca padrão python para a fácil visualização desses caminhos.
 
+## Apresentação
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/V98-hE-wLLE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Screenshots
 
 <center>
 
 ![Tela inicial](assets/TelaInicial.png)
+<center>
 <figcaption>Figura 1: Tela inicial do aplicativo</figcaption>
+</center>
 
 ![Mapa](assets/visualizarMapa.png)
+<center>
 <figcaption>Figura 2: Tela visualizar mapa</figcaption>
+</center>
 
 ![Mapa](assets/menorRota.png)
+<center>
 <figcaption>Figura 3: Tela do caminho</figcaption>
+</center>
 
 </center>
 
