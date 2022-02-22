@@ -19,10 +19,7 @@ O nosso projeto é chamado de GDelivery, onde o objetivo é achar o melhor e mai
 <<<<<<< HEAD
 Segue o link para a apresentação dessa segunda entrega:
 
-[![Vídeo do projeto](https://img.youtube.com/vi/V98-hE-wLLE/0.jpg)](https://www.youtube.com/watch?v=ropHJGIhRlQ)
-=======
 [![Vídeo do projeto](https://img.youtube.com/vi/V98-hE-wLLE/0.jpg)](https://youtu.be/V98-hE-wLLE)
->>>>>>> 81971772afb778fd170cef43e4d8b055d7075f50
 
 ## Screenshots
 
